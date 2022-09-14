@@ -3,7 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script type="text/javascript" src="js/text.js"></script>
+    <script type="text/javascript">
+        function dataCheck(){
+            var passWord = document.getElementById("passWord").value;
+            var passWord2 = document.getElementById("passWord2").value;
+
+            var passWordMsg = document.getElementById("passWordMsg");
+
+            if(passWord != passWord2){
+                passWordMsg.innerText = "两次密码不一致";
+            }else{
+                passWordMsg.innerText = "";
+            }
+            //return isPass;
+        }
+
+        function CheckUserName(username){
+            var userNameMsg = document.getElementById("userNameMessage");
+            var length = userName.value.length;
+            if(length<3||length>8){
+                //alert("用户名长度必须是3-8位");
+                userNameMsg.innerText = "用户名长度必须是3-8位";
+            }else{
+                userNameMsg.innerText = "";
+            }
+        }
+
+        function CheckEmail(userEmail){
+            var emailMsg = document.getElementById("emailMsg");
+
+            var p = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+            if(!p.test(userEmail.value)){
+                //alert("邮件格式不正确");
+                emailMsg.innerText = "邮箱格式不正确";
+            }else{
+                emailMsg.innerText = "";
+            }
+        }
+
+        function CheckPassWord(){
+            var passWord = document.getElementById("passWord").value;
+            var passWord2 = document.getElementById("passWord2").value;
+
+            var passWordMsg = document.getElementById("passWordMsg");
+
+            if(passWord.length<6||passWord.length>10){
+                //alert("密码长度不正确");
+                passWordMsg.innerText = "密码长度不正确";
+                isPass = false;
+            }else{
+                passWordMsg.innerText = "";
+                // if(passWord!=passWord2){
+                //     //alert("两次密码不一致");
+                //     passWordMsg.innerText = "两次密码不一致";
+                //     isPass = false;
+                // }
+                // else{
+                //     passWordMsg.innerText = "";
+                // }
+            }
+        }
+    </script>
 
 </head>
 <body>
