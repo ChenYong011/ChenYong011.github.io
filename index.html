@@ -3,99 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style type="text/css">
+
+    </style>
     <script type="text/javascript">
-        function dataCheck(){
-            var passWord = document.getElementById("passWord").value;
-            var passWord2 = document.getElementById("passWord2").value;
-
-            var passWordMsg = document.getElementById("passWordMsg");
-
-            if(passWord != passWord2){
-                passWordMsg.innerText = "两次密码不一致";
-            }else{
-                passWordMsg.innerText = "";
-            }
-            //return isPass;
-        }
-
-        function CheckUserName(username){
-            var userNameMsg = document.getElementById("userNameMessage");
-            var length = userName.value.length;
-            if(length<3||length>8){
-                //alert("用户名长度必须是3-8位");
-                userNameMsg.innerText = "用户名长度必须是3-8位";
-            }else{
-                userNameMsg.innerText = "";
-            }
-        }
-
-        function CheckEmail(userEmail){
-            var emailMsg = document.getElementById("emailMsg");
-
-            var p = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
-            if(!p.test(userEmail.value)){
-                //alert("邮件格式不正确");
-                emailMsg.innerText = "邮箱格式不正确";
-            }else{
-                emailMsg.innerText = "";
-            }
-        }
-
-        function CheckPassWord(){
-            var passWord = document.getElementById("passWord").value;
-            var passWord2 = document.getElementById("passWord2").value;
-
-            var passWordMsg = document.getElementById("passWordMsg");
-
-            if(passWord.length<6||passWord.length>10){
-                //alert("密码长度不正确");
-                passWordMsg.innerText = "密码长度不正确";
-                isPass = false;
-            }else{
-                passWordMsg.innerText = "";
-                // if(passWord!=passWord2){
-                //     //alert("两次密码不一致");
-                //     passWordMsg.innerText = "两次密码不一致";
-                //     isPass = false;
-                // }
-                // else{
-                //     passWordMsg.innerText = "";
-                // }
-            }
-        }
     </script>
-
 </head>
 <body>
-    <form action="register.jsp" onsubmit="return dataCheck()">
-        <table border="1px" width="500px" height="500px">
-            <tr>
-                <td colspan="2" align="center">注册</td>
-            </tr>
-            <tr>
-                <td align="right">用户名:</td><td align="left"><input type="text" id="userName" onblur="CheckUserName(this)"/>
-                <font color="red" id="userNameMessage"></font>
-                </td>
-            </tr>
-            <tr>
-                <td align="right">邮箱:</td><td align="left"><input type="text" id="userEmail" onblur="CheckEmail(this)"/>
-                <font color="red" id="emailMsg"></font>
-                </td>
-            </tr>
-            <tr>
-                <td align="right">密码:</td><td align="left"><input type="password" id="passWord" onblur="CheckPassWord()"/>
-                <font color="red" id="passWordMsg"></font>
-                </td>
-            </tr>
-            <tr>
-                <td align="right">重复密码</td><td align="left"><input type="password" id="passWord2"/>
-                <font color="red" id="rePassWordMsg"></font>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2" align="center"><input type="submit" value="注册"></td>
-            </tr>
-        </table>
-    </form>
+    <h1>就这就这就这？？？？？？？？</h1>
 </body>
 </html>
