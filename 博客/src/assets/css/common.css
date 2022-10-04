@@ -1,0 +1,31 @@
+/* 测试工具 */
+.bd{
+    border: 1px solid red;
+}
+
+
+/* 版心 */
+.container{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+/* 文化背景 */
+.backgroud .culture
+/* 浮动 */
+.fl{
+    float: left;
+}
+
+.fr{
+    float: right;
+}
+
+.clearfix::after{
+    content: '';
+    height: 0;
+    display: block;
+    clear: both;
+}
+
+   

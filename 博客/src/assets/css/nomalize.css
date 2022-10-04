@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    vertical-align: middle; /* 清除图片底部间隙 */
+}
+
+ul{
+    list-style: none;  /* 清除列表前面样式 */
+}
+
+a{
+    text-decoration: none; /* 去掉下划线 */
+}
+
+
+
+/* 重新设置样式 */
+body{
+    font-family: 'NotoSansHans-Regula';
+    font-size: 14px;
+    color: #666;
+    background-color: #f2f2f2;
+}
+
+
+a{
+    color: #333;
+} 

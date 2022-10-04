@@ -1,0 +1,240 @@
+@import '../../assets/css/nomalize.css';
+@import '../../assets/css/common.css';
+
+.container{
+    width: 1200px;
+}
+.hd-top {
+    height: 25px;
+    background-color: #444;
+}
+
+.hd-top a {
+    font-size: 12px;
+    line-height: 25px;
+    color: #aaa;
+}
+
+.hd-top .about {
+    margin-right: 22px;
+}
+
+.hd-bottom {
+    height: 75px;
+    background-color: #fff;
+}
+
+.hd-bottom .logo {
+    /* width: 152px;
+    height: 50px; */
+    background-image: url(../../assets/imgs/logo.png)
+}
+
+.hd-bottom li {
+    float: right;
+    margin-right: 38px;
+}
+
+.hd-bottom a {
+    color: #666;
+    font-size: 18px;
+    line-height: 75px;
+}
+
+.hd-bottom .active {
+    color: #00a7ea;
+}
+
+.advert {
+    background-image: url(../../assets/imgs/banner.jpg);
+    height: 185px;
+    color: #fff;
+    padding: 65px 0 0 310px;
+}
+
+.advert h4 {
+    font-size: 30px;
+    line-height: 20px;
+}
+
+.advert p {
+    font-size: 14px;
+    margin-top: 15px;
+
+}
+
+.main {
+    margin-top: 15px;
+}
+
+.main .left {
+    float: left;
+}
+
+.main .left li {
+    width: 850px;
+    height: 200px;
+    padding: 17px 12px;
+    background-color: #fff;
+    margin-bottom: 15px;
+}
+
+.main .left li img {
+    float: left;
+    width: 205px;
+    margin-right: 15px;
+}
+
+.main .left .goods {
+    float: left;
+}
+
+.main .goods h2 {
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 15PX;
+}
+
+.main .left .goods .icon span {
+    display: inline-block;
+    margin-right: 8px;
+    width: 14px;
+    height: 14px;
+    background-image: url(../../assets/imgs/icon.png);
+    background-position: -1px 1px;
+
+}
+
+.main .left .goods .icon span:nth-child(2) {
+    background-position: -1px -15px;
+    margin-left: 8px;
+}
+
+.main .left .goods .icon span:nth-child(3) {
+    background-position: -1px -31px;
+    margin-left: 8px;
+}
+
+.main .left .goods .icon span:nth-child(4) {
+    background-position: 0 -47px;
+    margin-left: 8px;
+}
+
+.main .goods p {
+    font-size: 14px;
+    width: 588px;
+    margin-top: 20px;
+    line-height: 20px;
+}
+
+.main .left .button {
+    margin-top: 20px;
+    margin-left: 260px;
+}
+
+.main .left .button a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    line-height: 40px;
+    text-align: center;
+    color: #444;
+    margin-right: 6pxs;
+}
+
+.main .left .notice {
+    margin: 32px 0 20px 0;
+    font-size: 14px;
+    color: #666666;
+}
+
+.main .right {
+    float: right;
+    padding: 0 12px;
+    width: 330px;
+    height: 1341px;
+    background-color: #fff;
+}
+
+.main .right h3 {
+    font-size: 20px;
+    margin-top: 18px;
+    padding-bottom: 18px;
+    color: #333;
+    font-weight: normal;
+    border-bottom: solid 1px #f3f3f3;
+}
+
+.main .right ul {
+    margin-top: 15px;
+    margin-bottom: 20px;
+
+}
+
+.main .right li {
+    float: left;
+    width: 150px;
+    height: 35px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+    line-height: 35px;
+    text-align: center;
+    background-color: #f8f8f8;
+}
+
+.main .right li:nth-child(2n) {
+    margin-right: 0;
+}
+
+.main .right li a {
+    font-size: 14px;
+    color: #666;
+}
+
+.main .right .comment p {
+    height: 50px;
+    font-size: 14px;
+    color: #666;
+    line-height: 50px;
+    border-bottom: 1px dashed #eaeaea;
+}
+
+.main .right .comment span {
+    position: relative;
+    display: inline-block;
+    width: 55px;
+    height: 21px;
+    margin-right: 10px;
+    background-color: #00a7ea;
+    line-height: 21px;
+    text-align: center;
+    color: #fff;
+}
+
+.main .right .comment span::after {
+    position: absolute;
+    left: 52px;
+    top: 3px;
+    display: inline-block;
+    content: '';
+    width: 0px;
+    height: 0px;
+    border-top: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid #00a7ea;
+}
+
+.footer {
+    padding: 16px 0;
+    height: 109px;
+    background-color: #fff;
+}
+
+.footer .copyright {
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #b7b7b7;
+}

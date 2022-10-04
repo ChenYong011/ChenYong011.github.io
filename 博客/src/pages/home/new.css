@@ -1,0 +1,330 @@
+@import '../../assets/css/reset.css';
+@import '../../assets/css/common.css';
+
+*{
+    box-sizing: border-box;
+}
+.hd {
+    height: 74px;
+    background-color: #d43b33;
+}
+
+.hd .logo h1 {
+    float: left;
+    width: 118px;
+    height: 74px;
+}
+
+.hd ul {
+    float: left;
+    margin-left: 190px;
+    height: 74px;
+}
+
+.hd li {
+    float: left;
+    line-height: 74px;
+}
+
+.hd li a {
+    margin-left: 40px;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+}
+
+/* 版图 */
+.advert {
+    margin: 0 auto;
+    width: 1440px;
+    background: url(../../图片/banner.png) no-repeat;
+    height: 279px;
+    margin-bottom: 50px;
+}
+
+.content {
+    margin-top: 30px;
+    font-size: 25px;
+}
+
+.content h2 {
+    margin-left: 435px;
+    font-weight: normal;
+    color: #7a7a7a;
+}
+
+.left {
+    float: left;
+    width: 320px;
+    height: 2px;
+    background-color: #cbcbcb;
+    margin-left: 80px;
+}
+
+.box {
+    height: 50px;
+    color: #d43b33;
+    font-size: 18px;
+    text-align: center;
+
+}
+
+.right1 {
+    float: right;
+    width: 320px;
+    height: 2px;
+    background-color: #cbcbcb;
+    margin-right: 80px;
+}
+
+.content .para {
+    margin: 0 auto;
+    width: 840px;
+    height: 113px;
+    text-align: center;
+    line-height: 27px;
+    font-size: 14px;
+    color: #686868;
+    margin-bottom: 40px;
+}
+
+.content .button {
+    margin-left: 458px;
+    width: 100px;
+    height: 29px;
+    background-color: #ffffff;
+    box-shadow: 1px 2px 1px 0px rgba(0, 0, 0, 0.35);
+    border-radius: 15px;
+    border: solid 1px #e3edec;
+}
+.content  a{
+    text-align: center;
+    font-size: 12px;
+    color: #464646;
+}
+
+/* 背景 */
+.culture{
+    height: 35px;
+    margin-top: 40px;
+    border-bottom: solid 1px #626262;
+}
+.culture ul{
+    margin-left: 320px;
+}
+.culture li{
+    border: solid 1px #626262;
+    float:left;
+    margin-right: 10px;
+    background-color: #626262;
+    text-align: center;
+    width:107px;
+}
+.culture li:hover{
+    background-color: #fff;
+   border-bottom: #fff;
+  
+}
+.culture li:hover a{
+   text-decoration: none;
+    color:  #b61717; 
+}
+
+.culture a{
+    line-height: 35px;
+   font-size: 12px;
+   color: #fff;
+}
+
+.background .brief{
+    margin-top: 40px;
+    height: 184px;
+    margin-bottom: 32px;
+}
+.background .brief img{
+    float: left;
+    margin-right: 30px;
+    width: 340px;
+    height: 184px;
+}
+.background .brief p{
+    font-size: 12px;
+    color: #464646;
+    line-height: 22px;
+}
+
+/* 项目图片 */
+.programme{
+    padding: 37px 30px 60px 30px ;
+    height: 340px;
+    background-image: url(../../图片/by_good_project.png);
+}
+
+.programme h4{
+    text-align: center;
+    font-size: 25px;
+    color: #7a7a7a;
+    font-weight: normal;
+}
+.programme p{
+    text-align: center;
+    font-size: 18px;
+    color: #d43b33;
+    margin-bottom: 45px;
+}
+.programme .photo{
+    position: relative;
+    padding: 0 30px;
+    width: 1000px;
+    height: 150px;
+}
+.programme .photo img{
+    margin-right: 3px;
+    width: 310px;
+	height: 150px;
+}
+.programme .photo .btleft{
+    position: absolute;
+    top: 1px;
+    left: 0;
+    width: 20px;
+	height: 148px;
+    background-image: url(../../图片/btnleft.png);
+}
+.programme .photo .btright{
+    position: absolute;
+    top: 1px;
+    left: 980px;
+    width: 20px;
+	height: 148px;
+    background-image: url(../../图片/btnright.png);
+}
+.programme .project{
+    float: left;
+    position: relative;
+}
+.programme .project .mask{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 30px;
+    width: 310px;
+    background-color: rgba(0,0,0,.7);
+    color: #fff;
+    line-height: 30px;
+    text-indent: 2em;
+}
+/* 最后一板块的新闻和留言 */
+.nmsg{
+    padding-top: 24px;
+    height: 460px;
+}
+.nmsg .news{
+    float: left;
+    width: 465px;
+    height: 400px;
+}
+.nmsg .msg{
+    float: right;
+    height: 380px;
+    width: 500px;
+}
+.nmsg .news h5,
+.nmsg .msg h5
+{
+    font-size: 14px;
+    color: #010000;
+    line-height: 19px;
+    font-weight: normal;
+    margin-top: 5px;
+}
+.nmsg .news h6,
+.nmsg .msg h6
+{
+    font-size: 14px;
+    color: #d43b33;
+    margin-bottom :12px;
+}
+.nmsg .news li{
+    height: 36px;
+    line-height: 36px;
+    border-bottom: 1px dashed #4c4c4c;
+}
+
+.nmsg .news li a{
+    font-size: 12px;
+    color: #000;
+}
+.nmsg .news p{
+    font-size: 20px;
+    color: #000;
+    margin-top: 10px;
+}
+.nmsg .msg .intro input{
+    margin-top: 10px;
+    padding: 12px;
+    width: 220px;
+	height: 16px;
+	border: solid 1px #4c4c4c;
+}
+.nmsg .msg .intro .test{
+    width: 66px;
+}
+.nmsg .msg .intro .need{
+    margin-top: 10px;
+    width: 498px;
+    height: 190px;
+}
+.nmsg .msg .copy{
+    line-height: 30px;
+    height: 30px;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #7d7d7d;
+}
+.nmsg .msg .copy a{
+    color: #841c1c;
+}
+.nmsg .msg .copy input{
+    float: right;
+    width: 130px;
+	height: 28px;
+    background-color: #d43b33;
+    color: #fff;
+    text-align: center;
+    line-height: 28px;
+    border: #fff;
+}
+
+/* 版权 */
+.footer {
+    background: url(../../图片/bottombg.png);
+    height: 250px;
+    padding-top: 52px;
+}
+
+.footer img {
+    float: left;
+    margin-right: 84px;
+}
+
+.footer .right {
+    float: left;
+}
+
+.footer h3 {
+    font-size: 17px;
+    color: #fff;
+    margin-bottom: 24px;
+}
+
+.footer p {
+    font-size: 14px;
+    color: #fff;
+    line-height: 27px;
+}
+
+.footer .copy {
+    margin-top: 50px;
+    color: #444;
+}
