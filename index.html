@@ -4,20 +4,60 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style type="text/css">
+        body{
+            background-color: chocolate;
+        }
         a{
             font-size: 25px;
+        }
+        #page{
+            border: 1px solid black;
+            margin-left: 23%;
+            margin-right: 23%;
+            margin-top: 8%;
+        }
+        h1{
+            text-align: center;
+        }
+        span{
+            margin-left: 10%;
+            font-size: 2em;
+        }
+        #tip{
+            float: right;
+            font-size: 1em;
         }
     </style>
     <script type="text/javascript">
     </script>
 </head>
 <body>
-<h1>Welcome to my github</h1>
-<ul>
-    <li><a href="firstPage.html">页面一</a></li>
-    <li><a href="博客/src/pages/home/home.html">页面二</a></li>
-    <li><a href="AnyButton/index.html">页面三</a></li>
-    <li><a href="login/index.html">页面四</a></li>
-</ul>
+<div id="page">
+    <h1>Welcome to my github</h1>
+    <span onclick="jump(0)">页面一</span>
+    <span onclick="jump(4)">页面五</span>
+    <span onclick="jump(8)">页面九</span>
+    <br><br>
+    <span onclick="jump(1)">页面二</span>
+    <span onclick="jump(5)">页面六</span>
+    <span onclick="jump(9)">页面十</span>
+    <br><br>
+    <span onclick="jump(2)">页面三</span>
+    <span onclick="jump(6)">页面七</span>
+    <span onclick="jump(10)">页面十一</span>
+    <br><br>
+    <span onclick="jump(3)">页面四</span>
+    <span onclick="jump(7)">页面八</span>
+    <span onclick="jump(11)">页面十二</span>
+    <br><br>
+    <span>期末作业</span>
+    <br><span id="tip">(点击查看页面)</span><br>
+</div>
+<script type="text/javascript">
+    let address = ["firstPage.html","博客/src/pages/home/home.html","AnyButton/index.html","login/index.html","five/index.html","six/index.html","seven/index.html","eight/index.html","nine/index.html","ten/index.html","eleven/index.html","twelve/index.html"]
+    function jump(index){
+        window.location.href = address[index];
+    }
+</script>
 </body>
 </html>
