@@ -2,122 +2,75 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>dom2</title>
+    <title>Title</title>
     <style>
-        body {
-            margin: 0;
-            cursor: pointer;
-        }
-
-        div {
-            background-color: rgba(100, 100, 100, 0.1);
-            box-sizing: border-box;
-            border: 1px solid rgb(100, 100, 200);
-            border-radius: 50%;
-            margin: 0;
+        body{
+            display: inline-block;
             padding: 0;
-            position: absolute;
-            transition: all 0.5s;
-
+            margin: 0;
         }
-
-        div.bd {
-            background-color: rgba(0, 100, 100, 0.05);
-            border: 0 solid;
-            border-radius: 0;
-        }
-
-        div p {
-            margin: auto;
-            padding: 10%;
-            color: rgb(0, 200, 0);
-            text-align: center;
-            text-shadow: 1px 1px rgb(0, 100, 100);
+        div{
+            height: 80px;
+            width: 80px;
+            margin: 10px;
+            word-break: break-all;
+            background-color: cornflowerblue;
+            padding-left: 10px;
+            padding-top: 10px;
+            border-radius: 50%;
+            position: relative;
+            transition: all 0.4s;
+            font-size: 50px;
+            border: 1px solid green;
+            opacity: 0.7;
         }
     </style>
 </head>
 <body>
-<script>
-    let sn = 0;
-    let allBall = [];
-    const S = ['海内存知己，天涯若比邻。', '离离原上草，一岁一枯荣。'];
-    const NUMS = 6;
-    // 单击事件
-    document.body.onclick = function () {
-        for (let ball of allBall) {
-            ball.randPositionDiv();
-        }
-    }
-    // 移动事件
-    document.body.onmousemove = document.body.ontouchmove = function () {
-        for (let ball of allBall) {
-            ball.setPositionDiv();
-        }
-    }
-    // 双击事件
-    document.body.ondblclick = function () {
-        for (let ball of allBall) {
-            this.removeChild(ball.dom);
-        }
-        allBall = [];
-        sn === S.length - 1 ? sn = 0 : sn++;
-        for (let i = 0; i < S[sn].length; i++) {
-            let x = i % NUMS;
-            let y = Math.floor(i / NUMS);
-            let ball = new Ball(x, y);
-            ball.createDivDom(S[sn][i]);
-            ball.randPositionDiv();
-            allBall.push(ball);
-        }
-    }
 
+<script>
+    let ans = ['临别殷勤重寄词，','词中有誓两心知。','七月七日长生殿，','夜半无人私语时。','在天愿作比翼鸟，','在地愿为连理枝。','天长地久有时尽，','此恨绵绵无绝期。']
+    for(let i=0;i<ans.length;i++){
+        for(let j=0;j<8;j++){
+            let divDom = document.createElement('div');
+            divDom.textContent = ans[i].charAt(j);
+            divDom.style.display = 'inline-block'
+            document.body.appendChild(divDom)
+        }
+        let br = document.createElement('br')
+        document.body.appendChild(br);
+    }
+    //自适应全屏
     let bodyWidth = window.innerWidth;
     let bodyHeight = window.innerHeight;
-    document.body.style.width = bodyWidth + 'px';
-    document.body.style.height = bodyHeight + 'px';
-    for (let i = 0; i < S[sn].length; i++) {
-        let x = i % NUMS;
-        let y = Math.floor(i / NUMS);
-        let ball = new Ball(x, y);
-        ball.createDivDom(S[sn][i]);
-        ball.randPositionDiv();
-        allBall.push(ball);
-    }
+    document.body.style.width = bodyWidth + 'px'
+    document.body.style.height = bodyHeight + 'px'
 
-    function Ball(x, y) {
-        this.x = x;
-        this.y = y;
-        this.dom = null;
-        this.createDivDom = function (s) {
-            let div = document.createElement('div');
-            let p = document.createElement('p');
-            p.textContent = s;
-            p.style.fontSize = 25 + 'px';
-            div.style.width = div.style.height = 50 + 'px';
-            if (this.x === 5) {
-                div.className = 'bd';
-            }
-            div.appendChild(p);
-            document.body.appendChild(div);
-            this.dom = div;
-        };
-        this.randPositionDiv = function () {
-            let x = Math.floor(Math.random() * bodyWidth);
-            if (x > bodyWidth/1.1){
-                x = x - bodyWidth/1.1;
-            }
-            let y = Math.floor(Math.random() * bodyHeight);
-            if (y > bodyHeight/1.1){
-                y = y - bodyHeight/1.1;
-            }
-            this.dom.style.left = x + "px";
-            this.dom.style.top = y + "px";
+    function randomPosition(dom){
+        let num1 = Math.floor(Math.random()*30)
+        let num2 = Math.floor(Math.random()*30)
+        dom.style.left = num1 + '%'
+        dom.style.top = num2 + '%'
+    }
+    let dom = document.querySelectorAll('div')
+    for(let i=0;i<dom.length;i++){
+        dom[i].onmouseover = function (){
+            randomPosition(dom[i])
         }
-        this.setPositionDiv = function () {
-            let x = parseInt(this.x) * 80;
-            let y = parseInt(this.y) * 80;
-            this.dom.style.left = x + 50 + 'px';
-            this.dom.style.top = y + 50 + 'px';
+    }
+    document.body.ondblclick = function(){
+        for(let i=0;i<dom.length;i++){
+            dom[i].style.left = 0;
+            dom[i].style.top = 0;
+            dom[i].style.backgroundColor = 'white'
+        }
+    }
+    document.body.onmouseover = function (){
+        let num1 = Math.floor(Math.random()*255)
+        let num2 = Math.floor(Math.random()*255)
+        let num3 = Math.floor(Math.random()*255)
+        for(let i=0;i<dom.length;i++){
+            dom[i].style.backgroundColor = "#"+num1+num2+num3+"";
         }
     }
 </script>
